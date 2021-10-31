@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //创建类class
+    class Star{
+        constructor(uname,age) {
+            this.uname=uname;
+            this.age=age;
+        }
+        sing(song){
+            console.log(this.uname+song);
+        }
+    }
+    //利用类创建对象
+    var ldh=new Star('liudehua',18);
+    var zxy=new Star('zhangxueyou',18);
+    console.log(ldh);
+    console.log(zxy);
+    //创建类，类名首字母大写
+    //类里的constructor函数接受传递过来的参数，返回实例对象
+    //只要生成new实例，就会自动创建constructo函数
+    ldh.sing('binyu');
+    zxy.sing('lixianglan');
+
+</script>
+</body>
+</html>

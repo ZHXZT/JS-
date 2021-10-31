@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //遍历数组
+        var arr = [1,2,3,];
+        arr.forEach(function(value,index,array){
+            console.log('每个数组元素' + value);
+            console.log('每个数组元素的索引' + index);
+            console.log('数组本身' + array);
+        });
+
+
+        //遍历数组并筛选
+        var arr = [22,4,55,20];
+        var newarr = arr.filter(function(value,index){
+            return value>=20;
+        });
+        console.log(newarr);    
+
+
+        //查找数组中符合条件的元素，返回布尔值
+        var arr = [22,4,55,20];
+        var result = arr.some(function(value,index){
+            return value>=20;
+        });
+        console.log(result); 
+    </script>
+</body>
+</html>

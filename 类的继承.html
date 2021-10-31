@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // class Father{
+        //     constructor(){
+
+        //     }
+        //     money(){
+        //         console.log(100);
+        //     }
+        // }
+        // class Son extends Father{
+
+        // }
+
+        // var son =new Son();
+        // son.money();
+
+
+        class Father{
+            constructor(x,y){
+                this.x=x;
+                this.y=y;
+            }
+            sum(){
+                console.log(this.x+this.y);
+            }
+        }
+        class Son extends Father{
+            constructor(x,y){
+                super(x,y);//调用了父类的构造函数
+                super.sum()//调用父类的普通函数
+            }
+        }
+        var son=new Son(1,2);
+        son.sum();
+        //继承中，如果子类里面有方法，就像调用子类的再去调用父类
+
+
+//子类继承父类加法，同时扩展减法
+        class Father{
+            constructor(x,y){
+                this.x=x;
+                this.y=y;
+            }
+            sum(){
+                    console.log(this.x+this.y);
+                }
+        }
+        class Son extends Father{
+            constructor(x,y){
+                super();//必须先调用父类的构造函数，再使用子类的构造函数
+                this.x=x;
+                this.y=y;
+            }
+            subtract(){
+                console.log(this.x-this.y);
+            }
+        }
+        var son=new Son(5,3);
+        son.subtract();
+        son.sum();
+    </script>
+    
+</body>
+</html>

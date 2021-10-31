@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';//js使用严格模式
+        var sum = 10;//变量必须先声明再使用
+        delete sum;//不能随便删除已经声明好的变量
+        function fn(){
+            console.log(this);//严格模式全局作用域的this指向undefined
+        }
+        //严格模式下，构造函数不加new调用，this会报错
+        //定时器的this还是指向window
+        // 严格模式下函数参数不得重名
+        
+
+
+    </script>
+</body>
+</html>
